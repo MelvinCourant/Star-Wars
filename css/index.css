@@ -84,24 +84,26 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
 }
 
 .left li {
-  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
   opacity: 0;
+  width: 509px;
   transform: translateX(48px);
   transition: all 0.3s ease-in-out;
 }
 
 .left li.active {
-  display: block;
   opacity: 1;
   transform: translateX(0);
   transition: all 0.3s ease-in-out;
 }
 
 .left li.hide {
-  display: none;
   opacity: 0;
   transform: translateX(-136px);
   transition: all 0.3s ease-in-out;
