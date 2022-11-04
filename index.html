@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns="http://www.w3.org/1999/html">
+  <head>
+    <meta charset="UTF-8">
+    <title>Star Wars</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/index.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <main>
+      <div id="slider">
+        <div class="left">
+            <ul id="top">
+              <li data-slide="1" class="active">
+                <img src="imgs/resistance.svg" alt="">
+                <h1>Un nouvel espoir</h1>
+                <p>C'est le premier opus de la saga Star Wars par sa date de sortie, mais le quatrième selon l'ordre chronologique de l'histoire.</p>
+              </li>
+              <li data-slide="2">
+                <img src="imgs/empire.svg" alt="">
+                <h1>L’empire contre-attaque</h1>
+                <p>La guerre entre le maléfique Empire galactique et son antagoniste, l’Alliance rebelle, bat son plein.</p>
+              </li>
+              <li data-slide="3">
+                <img src="imgs/jedi.svg" alt="">
+                <h1>Le retour du Jedi</h1>
+                <p>Le maléfique Empire galactique construit une nouvelle station spatiale Étoile de la mort pour anéantir définitivement l'Alliance rebelle.</p>
+              </li>
+            </ul>
+            <p class="date">19<span data-slide="1" class="active">77</span><span data-slide="2">80</span><span data-slide="3">83</span></p>
+          </div>
+          <div class="right">
+            <img src="imgs/affiche-1.jpg" class="active" alt="" data-slide="1">
+            <img src="imgs/affiche-2.jpg" alt="" data-slide="2">
+            <img src="imgs/affiche-3.jpg" alt="" data-slide="3">
+          </div>
+      </div>
+      <div id="bottom">
+        <div id="slides-buttons">
+          <button id="previous" class="max">
+            <img src="imgs/arrow-left.svg" alt="Slide précédente">
+          </button>
+          <button id="next">
+            <img src="imgs/arrow-right.svg" alt="Slide suivante">
+          </button>
+        </div>
+        <ul>
+          <li data-slide="1" class="active"><div class="yellow-bars"></div></li>
+          <li data-slide="2"><div class="yellow-bars"></div></li>
+          <li data-slide="3"><div class="yellow-bars"></div></li>
+          <li data-slide="4"><div class="yellow-bars"></div></li>
+          <li data-slide="5"><div class="yellow-bars"></div></li>
+        </ul>
+      </div>
+    </main>
+  </body>
+</html>
