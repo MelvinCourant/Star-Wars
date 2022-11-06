@@ -1,4 +1,4 @@
-Star Wars
+<h1>Star Wars</h1>
 
 From Benjamin Code's challenge <br>
 
