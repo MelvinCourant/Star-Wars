@@ -33,6 +33,7 @@ body,
 main {
   height: 100%;
   width: 100%;
+  overflow: hidden;
 }
 
 body {
@@ -44,9 +45,8 @@ body {
 }
 
 main {
-  width: 100%;
-  padding: 0 187px;
   height: auto;
+  padding: 0 187px;
 }
 
 @media screen and (max-width: 1439px) {
@@ -56,6 +56,18 @@ main {
 }
 
 @media screen and (max-width: 1279px) {
+  main {
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  main {
+    padding: 0 100px;
+  }
+}
+
+@media screen and (max-width: 480px) {
   main {
     padding: 0 20px;
   }
@@ -77,10 +89,37 @@ h1 {
   line-height: 48.76px;
 }
 
+@media screen and (max-width: 991px) {
+  h1 {
+    text-align: center;
+    line-height: initial;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 27px;
+  }
+}
+
 p {
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
+}
+
+@media screen and (max-width: 991px) {
+  p {
+    line-height: initial;
+    height: 96px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  p {
+    font-size: 18px;
+    height: 88px;
+  }
 }
 
 #slider {
@@ -88,11 +127,26 @@ p {
   justify-content: space-between;
 }
 
+@media screen and (max-width: 991px) {
+  #slider {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 #left {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
+}
+
+@media screen and (max-width: 991px) {
+  #left {
+    justify-content: center;
+    width: 100%;
+  }
 }
 
 #left li {
@@ -103,6 +157,16 @@ p {
   width: 509px;
   transform: translateX(48px);
   transition: all 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 991px) {
+  #left li  {
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
 }
 
 #left li.active {
@@ -122,12 +186,41 @@ p {
   margin-bottom: 24px;
 }
 
+@media screen and (max-width: 480px) {
+  #left img {
+    width: 70px;
+  }
+}
+
 #left h1 {
   margin-bottom: 8px;
 }
 
 #left p:not(#date){
   width: 422px;
+}
+
+@media screen and (max-width: 991px) {
+  #left p:not(#date){
+    width: 100%;
+    text-align: center;
+  }
+}
+
+#top {
+  height: 300px;
+}
+
+@media screen and (max-width: 991px) {
+  #top {
+    height: 257px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #top {
+    height: 223px;
+  }
 }
 
 #date {
@@ -137,7 +230,22 @@ p {
   font-weight: 700;
   font-size: 231.148px;
   line-height: 69.5%;
-  vertical-align: bottom;
+}
+
+@media screen and (max-width: 991px) {
+  #date {
+    justify-content: center;
+    font-size: 120px;
+    line-height: initial;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #date {
+    font-size: 100px;
+    margin: 10px 0;
+  }
 }
 
 .first-number,
@@ -147,6 +255,14 @@ p {
   opacity: 0;
   transform: translateX(59px);
   transition: all 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 991px) {
+  .first-number,
+  .last-number {
+    position: initial;
+    display: none;
+  }
 }
 
 .first-number {
@@ -180,6 +296,18 @@ p {
   transition: all 0.3s ease-in-out;
 }
 
+@media screen and (max-width: 991px) {
+  .first-number.active,
+  .last-number.active {
+    display: block;
+  }
+
+  .first-number.hide,
+  .last-number.hide {
+    display: none;
+  }
+}
+
 .last-number[data-slide="1"].hide {
   transform: translateX(-53px) !important;
 }
@@ -193,8 +321,15 @@ p {
 
 @media screen and (max-width: 991px) {
   #right {
-    width: 279.5px;
-    height: 400px;
+    width: 300px;
+    height: 429.3px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #right {
+    width: 220px;
+    height: 314.82px;
   }
 }
 
@@ -225,6 +360,13 @@ p {
   margin-top: 80px;
 }
 
+@media screen and (max-width: 991px) {
+  #bottom {
+    flex-direction: column-reverse;
+    margin-top: 50px;
+  }
+}
+
 #slides-buttons {
   display: flex;
   gap: 40px;
@@ -238,6 +380,12 @@ button {
   transition: opacity 0.3s ease-in-out;
 }
 
+@media screen and (max-width: 991px) {
+  button {
+    margin-top: 30px;
+  }
+}
+
 button.max {
   opacity: 0.3;
   transition: opacity 0.3s ease-in-out;
@@ -246,6 +394,12 @@ button.max {
 #bottom ul {
   display: flex;
   width: 80.13%;
+}
+
+@media screen and (max-width: 991px) {
+  #bottom ul {
+    width: 100%;
+  }
 }
 
 #bottom li {
